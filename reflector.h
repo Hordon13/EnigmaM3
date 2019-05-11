@@ -1,16 +1,10 @@
-//
-// Created by Horváth Donát on 2019-05-12.
-//
-
 #ifndef ENIGMAM3_REFLECTOR_H
 #define ENIGMAM3_REFLECTOR_H
 
 
-
-class reflector {
+class Reflector {
 
 };
 
 
-
-#endif //ENIGMAM3_REFLECTOR_H
+#endif
