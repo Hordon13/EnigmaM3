@@ -7,7 +7,7 @@
 
 class Model {
 public:
-    Model(const std::string &config = "");
+    Model(const std::string &config = "368/UZV/AHM/B/AN.EZ.HK.IJ.LR.MQ.OT.PV.SW.UX");
 
     std::string encrypt(std::string &message);
 
