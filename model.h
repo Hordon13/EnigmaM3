@@ -7,7 +7,7 @@
 
 class Model {
 public:
-    Model(std::string config = "368/234/BBB/B/AN.EZ.HK.IJ.LR.MQ.OT.PV.SW.UX");
+    Model(std::string config = "368/UZV/AHM/B/AN.EZ.HK.IJ.LR.MQ.OT.PV.SW.UX");
 
     std::string encrypt(std::string &message);
 
@@ -19,9 +19,9 @@ private:
     Plugboard _plugboard;
 
     std::string _alphabet;
-    std::string _config;
 
     void configure(std::string &info);
+    void steppingMechanism();
 };
 
 #endif

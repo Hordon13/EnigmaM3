@@ -6,7 +6,7 @@ int main()
 {
     Model enigma;
     std::cout << "Enter a message: " << std::endl;
-    std::string input = "helloworld";
+    std::string input = "YKAENZAPMSCHZBFOCUVMRMDPYCOFHADZIZMEFXTHFLOLPZLFGGBOTGOXGRETDWTJIQHLMXVJWKZUASTR";
     //std::cin >> input;
     std::cout << enigma.encrypt(input) << std::endl;
 

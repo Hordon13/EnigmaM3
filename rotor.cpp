@@ -68,8 +68,8 @@ void Rotor::turn()
     _wiring += _wiring.at(0);
     _wiring.erase(0, 1);
 
-    _step = _ring.at(0) == _notch1.first || _ring.at(0) == _notch2.first;
-    _stepDouble = _ring.at(0) == _notch1.second || _ring.at(0) == _notch2.second;
+    _step.first = _ring.at(0) == _notch1.first || _ring.at(0) == _notch2.first;
+    _step.second = _ring.at(0) == _notch1.second || _ring.at(0) == _notch2.second;
 }
 
 int Rotor::process(int signal, Direction direction)
@@ -80,4 +80,9 @@ int Rotor::process(int signal, Direction direction)
         case backward:
             return _wiring.find(_core.at(signal));
     }
+}
+
+const std::pair<bool, bool> &Rotor::getStep() const
+{
+    return _step;
 }

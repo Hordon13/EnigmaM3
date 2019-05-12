@@ -19,6 +19,8 @@ public:
 
     int process(int signal, Direction direction);
 
+    const std::pair<bool, bool> &getStep() const;
+
 private:
     std::string _ring;
     std::string _core;
@@ -27,8 +29,7 @@ private:
     std::string _alphabet;
     std::pair<char, char> _notch1;
     std::pair<char, char> _notch2;
-    bool _step;
-    bool _stepDouble;
+    std::pair<bool, bool> _step;
 };
 
 #endif
