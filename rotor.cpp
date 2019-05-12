@@ -41,17 +41,9 @@ void Rotor::set(const char &type, char &position, char &ring)
         _notch2 = std::make_pair('M', 'N');
     }
 
-    if (isdigit(ring)) {
-        ring = _alphabet.at(ring - '1');
-    }
-
     while (_ring.at(0) != ring) {
         _ring += _ring.at(0);
         _ring.erase(0, 1);
-    }
-
-    if (isdigit(position)) {
-        position = _alphabet.at(position - '1');
     }
 
     while (_ring.at(0) != position) {
@@ -68,8 +60,8 @@ void Rotor::turn()
     _wiring += _wiring.at(0);
     _wiring.erase(0, 1);
 
-    _step.first = _ring.at(0) == _notch1.first || _ring.at(0) == _notch2.first;
-    _step.second = _ring.at(0) == _notch1.second || _ring.at(0) == _notch2.second;
+    _step.first = _ring.at(0) == _notch1.second || _ring.at(0) == _notch2.second;
+    _step.second = _ring.at(0) == _notch1.first || _ring.at(0) == _notch2.first;
 }
 
 int Rotor::process(int signal, Direction direction)
