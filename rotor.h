@@ -8,15 +8,15 @@ class Rotor {
 public:
     Rotor();
 
-    void setRotor(const std::string&, const std::string&, const std::string&);
+    void set(const std::string &type, std::string &position, std::string &ring);
 
     void turn();
 
     int process(int signal);
 
 private:
-    std::vector<char> _ring;
-    std::vector<char> _core;
+    std::string _ring;
+    std::string _core;
     std::string _wiring;
 
     std::string _alphabet;

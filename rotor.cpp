@@ -3,14 +3,12 @@
 Rotor::Rotor()
 {
     _alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    _ring = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T',
-             'U', 'V', 'W', 'X', 'Y', 'Z'};
-    _core = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T',
-             'U', 'V', 'W', 'X', 'Y', 'Z'};
+    _ring = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    _core = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     _notch2 = -1;
 }
 
-void Rotor::setRotor(const std::string &type, const std::string &position, const std::string &ring)
+void Rotor::set(const std::string &type, std::string &position, std::string &ring)
 {
     if (type == "1") {
         _wiring = "EKMFLGDQVZNTOWYHXUSPAIBRCJ";
@@ -40,10 +38,28 @@ void Rotor::setRotor(const std::string &type, const std::string &position, const
         _notch1 = 0;
         _notch2 = 0;
     }
+
+    if (isdigit(ring.at(0))) {
+        ring = _alphabet.at(std::stoi(ring) - 1);
+    }
+
+    while (_ring.at(0) != ring.at(0)) {
+        _ring += _ring.at(0);
+        _ring.erase(0);
+    }
+
+    if (isdigit(position.at(0))) {
+        position = _alphabet.at(std::stoi(position) - 1);
+    }
+
+    while (_ring.at(0) != position.at(0)) {
+        turn();
+    }
 }
 
 void Rotor::turn()
 {
+
 
 }
 
