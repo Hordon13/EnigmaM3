@@ -20,17 +20,10 @@ private:
     std::string _wiring;
 
     std::string _alphabet;
-    int _notch1;
-    int _notch2;
-
-    std::string _typeI;
-    std::string _typeII;
-    std::string _typeIII;
-    std::string _typeIV;
-    std::string _typeV;
-    std::string _typeVI;
-    std::string _typeVII;
-    std::string _typeVIII;
+    std::pair<char, char> _notch1;
+    std::pair<char, char> _notch2;
+    bool _step;
+    bool _stepDouble;
 };
 
 
