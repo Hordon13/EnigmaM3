@@ -12,31 +12,31 @@ void Rotor::set(const std::string &type, std::string &position, std::string &rin
 {
     if (type == "1") {
         _wiring = "EKMFLGDQVZNTOWYHXUSPAIBRCJ";
-        _notch1 = 0;
+        _notch1 = 16;
     } else if (type == "2") {
         _wiring = "AJDKSIRUXBLHWTMCQGZNPYFVOE";
-        _notch1 = 0;
+        _notch1 = 4;
     } else if (type == "3") {
         _wiring = "BDFHJLCPRTXVZNYEIWGAKMUSQO";
-        _notch1 = 0;
+        _notch1 = 21;
     } else if (type == "4") {
         _wiring = "ESOVPZJAYQUIRHXLNFTGKDCMWB";
-        _notch1 = 0;
+        _notch1 = 9;
     } else if (type == "5") {
         _wiring = "VZBRGITYUPSDNHLXAWMJQOFECK";
-        _notch1 = 0;
+        _notch1 = 25;
     } else if (type == "6") {
         _wiring = "JPGVOUMFYQBENHZRDKASXLICTW";
-        _notch1 = 0;
-        _notch2 = 0;
+        _notch1 = 25;
+        _notch2 = 12;
     } else if (type == "7") {
         _wiring = "NZJHGRCXMYSWBOUFAIVLPEKQDT";
-        _notch1 = 0;
-        _notch2 = 0;
+        _notch1 = 25;
+        _notch2 = 12;
     } else if (type == "8") {
         _wiring = "FKQHTLXOCBJSPDZRAMEWNIUYGV";
-        _notch1 = 0;
-        _notch2 = 0;
+        _notch1 = 25;
+        _notch2 = 12;
     }
 
     if (isdigit(ring.at(0))) {
