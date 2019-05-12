@@ -65,12 +65,19 @@ void Rotor::turn()
     _ring.erase(0, 1);
     _core += _core.at(0);
     _core.erase(0, 1);
+    _wiring += _wiring.at(0);
+    _wiring.erase(0, 1);
 
     _step = _ring.at(0) == _notch1.first || _ring.at(0) == _notch2.first;
     _stepDouble = _ring.at(0) == _notch1.second || _ring.at(0) == _notch2.second;
 }
 
-int Rotor::process(int signal)
+int Rotor::process(int signal, Direction direction)
 {
-    return 0;
+    switch (direction) {
+        case forward:
+            return _core.find(_wiring.at(signal));
+        case backward:
+            return _wiring.find(_core.at(signal));
+    }
 }

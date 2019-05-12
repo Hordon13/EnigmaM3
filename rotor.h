@@ -4,6 +4,11 @@
 #include <string>
 #include <vector>
 
+enum Direction {
+    forward,
+    backward
+};
+
 class Rotor {
 public:
     Rotor();
@@ -12,7 +17,7 @@ public:
 
     void turn();
 
-    int process(int signal);
+    int process(int signal, Direction direction);
 
 private:
     std::string _ring;
@@ -25,6 +30,5 @@ private:
     bool _step;
     bool _stepDouble;
 };
-
 
 #endif
