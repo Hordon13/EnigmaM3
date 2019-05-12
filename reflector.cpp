@@ -1,5 +1,10 @@
 #include "reflector.h"
 
+Reflector::Reflector()
+{
+    _alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+}
+
 void Reflector::set(const char &type)
 {
     if (type == 'B') {
@@ -11,5 +16,5 @@ void Reflector::set(const char &type)
 
 int Reflector::reverse(int signal)
 {
-    return 0;
+    return _alphabet.find(_wiring.at(signal));
 }
