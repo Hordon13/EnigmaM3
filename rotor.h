@@ -8,7 +8,7 @@ class Rotor {
 public:
     Rotor();
 
-    void set(const std::string &type, std::string &position, std::string &ring);
+    void set(const char &type, char &position, char &ring);
 
     void turn();
 

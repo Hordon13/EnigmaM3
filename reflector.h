@@ -5,7 +5,7 @@
 
 class Reflector {
 public:
-    void set(const std::string &type);
+    void set(const char &type);
 
     int reverse(int signal);
 private:

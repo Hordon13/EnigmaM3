@@ -7,7 +7,7 @@
 
 class Model {
 public:
-    Model(const std::string &config = "368/UZV/AHM/B/AN.EZ.HK.IJ.LR.MQ.OT.PV.SW.UX");
+    Model(std::string config = "368/234/AAA/B/AN.EZ.HK.IJ.LR.MQ.OT.PV.SW.UX");
 
     std::string encrypt(std::string &message);
 
@@ -21,7 +21,7 @@ private:
     std::string _alphabet;
     std::string _config;
 
-    void configure(std::string info);
+    void configure(std::string &info);
 };
 
 #endif

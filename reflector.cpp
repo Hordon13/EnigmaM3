@@ -1,10 +1,10 @@
 #include "reflector.h"
 
-void Reflector::set(const std::string &type)
+void Reflector::set(const char &type)
 {
-    if (type == "B") {
+    if (type == 'B') {
         _wiring = "YRUHQSLDPXNGOKMIEBFZCWVJAT";
-    } else if (type == "C") {
+    } else if (type == 'C') {
         _wiring = "FVPJIAOYEDRZXWGCTKUQSBNMHL";
     }
 }

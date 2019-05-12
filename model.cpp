@@ -1,7 +1,10 @@
-#include <sstream>
 #include "model.h"
 
-Model::Model(const std::string &config)
+#include <sstream>
+#include <ctype.h>
+#include <iostream>
+
+Model::Model(std::string config)
 {
     _alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     _config = config;
@@ -9,7 +12,7 @@ Model::Model(const std::string &config)
 
 }
 
-void Model::configure(std::string info)
+void Model::configure(std::string &info)
 {
     for (char &i : info) i = toupper(i);
 
@@ -17,9 +20,9 @@ void Model::configure(std::string info)
     std::string detail;
     std::istringstream ss(info);
 
-    std::string typeLeft, positionLeft, ringLeft;
-    std::string typeMid, positionMid, ringMid;
-    std::string typeRight, positionRight, ringRight;
+    char typeLeft, positionLeft, ringLeft;
+    char typeMid, positionMid, ringMid;
+    char typeRight, positionRight, ringRight;
 
     while (getline(ss, detail, '/')) {
         if (it == 0) {
@@ -40,7 +43,7 @@ void Model::configure(std::string info)
             _rotorRight.set(typeRight, positionRight, ringRight);
 
         } else if (it == 3) {
-            _reflector.set(detail);
+            _reflector.set(detail.at(0));
 
         } else if (it == 4) {
             std::vector<std::pair<char, char>> plugPairs;
@@ -61,5 +64,5 @@ void Model::configure(std::string info)
 
 std::string Model::encrypt(std::string &message)
 {
-    return "*****";
+    return message;
 }
