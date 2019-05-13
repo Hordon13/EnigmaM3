@@ -1,0 +1,1 @@
+add_library(${PROJECT_LIB_NAME} view.cpp model.cpp rotor.cpp reflector.cpp plugboard.cpp)
