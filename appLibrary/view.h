@@ -1,9 +1,12 @@
 #ifndef VIEW_VIEW_H
 #define VIEW_VIEW_H
 
+#include <map>
+
 #include <SDL.h>
 #include <SDL_ttf.h>
 #include "SDL_mixer.h"
+
 #include "model.h"
 
 
@@ -23,14 +26,14 @@ public:
 
     void free();
 
-    bool loadFromRenderedText(std::string textureText, SDL_Color textColor);
+    bool loadFromRenderedText(const std::string &textureText, SDL_Color textColor);
 
     void renderElement(SDL_Texture *element, SDL_Rect position);
 
     void renderText(int x, int y, SDL_Rect *clip = nullptr, double angle = 0.0, SDL_Point *center = nullptr,
                     SDL_RendererFlip flip = SDL_FLIP_NONE);
 
-    void playEffect(std::string effect);
+    void playEffect(const std::string &effect);
 
     Model *getModel();
 
@@ -39,6 +42,12 @@ public:
     ////
 
     void drawBackground();
+
+    void drawUI();
+
+    void drawRotorPositions();
+
+    void highlight(std::string &message);
 
 private:
 
@@ -59,6 +68,8 @@ private:
     int _textHeigth;
 
     Model *_model;
+
+    std::map<std::string, std::pair<int, int>> _keyboard;
 };
 
 #endif
