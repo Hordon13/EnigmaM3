@@ -11,6 +11,12 @@ public:
 
     std::string encrypt(std::string &message);
 
+    const Rotor &getRotorLeft() const;
+
+    const Rotor &getRotorMid() const;
+
+    const Rotor &getRotorRight() const;
+
 private:
     Rotor _rotorLeft;
     Rotor _rotorMid;
@@ -20,8 +26,9 @@ private:
 
     std::string _alphabet;
 
-    void configure(std::string &info);
     void steppingMechanism();
+
+    void configure(std::string &info);
 };
 
 #endif

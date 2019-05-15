@@ -97,3 +97,18 @@ std::string Model::encrypt(std::string &message)
 
     return message;
 }
+
+const Rotor &Model::getRotorLeft() const
+{
+    return _rotorLeft;
+}
+
+const Rotor &Model::getRotorMid() const
+{
+    return _rotorMid;
+}
+
+const Rotor &Model::getRotorRight() const
+{
+    return _rotorRight;
+}
