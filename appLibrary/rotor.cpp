@@ -78,3 +78,8 @@ const std::pair<bool, bool> &Rotor::getStep() const
 {
     return _step;
 }
+
+const std::string &Rotor::getRing() const
+{
+    return _ring;
+}

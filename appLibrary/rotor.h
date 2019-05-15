@@ -21,6 +21,8 @@ public:
 
     const std::pair<bool, bool> &getStep() const;
 
+    const std::string &getRing() const;
+
 private:
     std::string _ring;
     std::string _core;
