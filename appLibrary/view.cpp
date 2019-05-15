@@ -129,7 +129,7 @@ bool View::loadMedia()
         success = false;
     }
 
-    _gFont = TTF_OpenFont("../media/atwriter.ttf", 60);
+    _gFont = TTF_OpenFont("../media/american_typewriter_bold.ttf", 40);
     if (_gFont == nullptr) {
         printf("Failed to load font! SDL_ttf Error: %s\n", TTF_GetError());
         success = false;
@@ -231,10 +231,18 @@ void View::drawBackground()
 void View::drawRotorPositions()
 {
     SDL_Color textColor = {0, 0, 0};
-    /*
-    loadFromRenderedText(", textColor);
-    renderText(200, 200);
-     */
+    std::string right, mid, left;
+
+    right.push_back(_model->getRotorRight().getRing().at(0));
+    mid.push_back(_model->getRotorMid().getRing().at(0));
+    left.push_back(_model->getRotorLeft().getRing().at(0));
+
+    loadFromRenderedText(right, textColor);
+    renderText(1127, 57);
+    loadFromRenderedText(mid, textColor);
+    renderText(1067, 57);
+    loadFromRenderedText(left, textColor);
+    renderText(1007, 57);
 }
 
 void View::highlight(std::string &message)
