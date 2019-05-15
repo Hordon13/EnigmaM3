@@ -24,7 +24,7 @@ By 1930, the Reichswehr had suggested that the Navy adopt the Enigma machine, ci
 * Plugboard
 	* There are 10 plug pair
 
-###Links
+### Links
 * [Detailed technical description](http://users.telenet.be/d.rijmenants/en/enigmatech.htm)
 * [Rotor and reflector details](https://en.wikipedia.org/wiki/Enigma_rotor_details)
 * [Online emulator to help the development](http://enigmaco.de/enigma/enigma.html)
