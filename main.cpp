@@ -7,9 +7,7 @@ int main()
 {
     std::cout << "Choose GUI: consol | graphic | readfile" << std::endl;
     std::string guiType;
-    //std::cin >> guiType;
-    guiType = "graphic";
-
+    std::cin >> guiType;
 
     if (guiType == "consol") {
 
@@ -197,8 +195,8 @@ int main()
                     }
 
                     view.drawBackground();
-                    view.drawRotorPositions();
                     view.highlight(enigmaReturn);
+                    view.drawRotorPositions();
                     view.drawUI();
 
                     SDL_RenderPresent(view.getGRenderer());
