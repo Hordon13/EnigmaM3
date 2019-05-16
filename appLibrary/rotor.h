@@ -28,7 +28,6 @@ private:
     std::string _core;
     std::string _wiring;
 
-    std::string _alphabet;
     std::pair<char, char> _notch1;
     std::pair<char, char> _notch2;
     std::pair<bool, bool> _step;

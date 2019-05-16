@@ -5,7 +5,6 @@
 
 Rotor::Rotor()
 {
-    _alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     _ring = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     _core = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 }

@@ -197,7 +197,7 @@ int main()
                     view.drawBackground();
                     view.highlight(enigmaReturn);
                     view.drawRotorPositions();
-                    view.drawUI();
+                    //view.drawUI();
 
                     SDL_RenderPresent(view.getGRenderer());
                 }
