@@ -209,7 +209,6 @@ void View::playEffect(const std::string &effect)
         }
     }
 
-    //_model->setPlayEffect("");
 }
 
 SDL_Renderer *View::getGRenderer() const
